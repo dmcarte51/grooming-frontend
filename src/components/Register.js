@@ -35,11 +35,15 @@ function Register() {
 
     const handleSubmit = (event) => { // create a new book
         event.preventDefault(); // the default is to refresh the page, this prevents that. 
-        const createdBook = {title: title, author: author, pages: pages};
-        createBook(createdBook);
-        setTitle('');
-        setAuthor('');
-        setPages('');
+        const createdUser = {username, email, firstName, lastName, password, matchPassword, phoneNumber};
+        createUser(createdUser);
+        setEmail('')
+        setFirstName('')
+        setLastName('')
+        setPhoneNumber('')
+        setPassword('')
+        setMatchPassword('')
+        setUsername('')
     }
 
     
