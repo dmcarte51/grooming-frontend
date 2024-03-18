@@ -21,6 +21,17 @@ function UsersProvider({ children }) {
     // const getUser = async (auth) => {
     //     const response = await axios.get(``)
     // }
+
+    const itemsToShare = {
+        user,
+        createUser
+    }
+
+    return (<UsersContext.Provider value={ itemsToShare }>
+        {children}
+    </UsersContext.Provider>
+    )
+
 }
 
 export { UsersProvider }

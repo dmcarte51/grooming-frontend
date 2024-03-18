@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import UsersContext from "../context/users";
 
-function useBooksContext() {
+function useUsersContext() {
     return useContext(UsersContext)
 }
 
-export default useBooksContext;
+export default useUsersContext;

@@ -1,6 +1,8 @@
 import { useState } from "react";
+import useUsersContext from "../hooks/use-users-context";
 
 function Register() {
+    const { createUser } = useUsersContext;
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -11,25 +13,25 @@ function Register() {
     const [phoneNumber, setPhoneNumber] = useState('');
 
     const handleChangeInUsername = (event) => {
-        setPages(event.target.value);
+        setUsername(event.target.value);
     }
     const handleChangeInEmail = (event) => {
-        setPages(event.target.value);
+        setEmail(event.target.value);
     }
     const handleChangeInFirstName = (event) => {
-        setPages(event.target.value);
+        setFirstName(event.target.value);
     }
     const handleChangeInLastName = (event) => {
-        setPages(event.target.value);
+        setLastName(event.target.value);
     }
     const handleChangeInPhoneNumber = (event) => {
-        setPages(event.target.value);
+        setPhoneNumber(event.target.value);
     }
     const handleChangeInPassword = (event) => {
-        setPages(event.target.value);
+        setPassword(event.target.value);
     }
     const handleChangeInMatchPassword = (event) => {
-        setPages(event.target.value);
+        setMatchPassword(event.target.value);
     }
 
 
@@ -52,19 +54,19 @@ function Register() {
         <div>Register</div>
         <form onSubmit={handleSubmit}>
             <label>Username:</label>
-            <input value={title} onChange={handleChangeInUsername} />
+            <input value={username} onChange={handleChangeInUsername} />
             <label>Email:</label>
-            <input value={author} onChange={handleChangeInEmail} />
+            <input value={email} onChange={handleChangeInEmail} />
             <label>First Name:</label>
-            <input value={pages} onChange={handleChangeInFirstName} />
+            <input value={firstName} onChange={handleChangeInFirstName} />
             <label>Last Name:</label>
-            <input value={pages} onChange={handleChangeInLastName} />
+            <input value={lastName} onChange={handleChangeInLastName} />
             <label>Phone Number:</label>
-            <input value={pages} onChange={handleChangeInPhoneNumber} />
+            <input value={phoneNumber} onChange={handleChangeInPhoneNumber} />
             <label>Password:</label>
-            <input value={pages} onChange={handleChangeInPassword} />
+            <input value={password} onChange={handleChangeInPassword} />
             <label>Confirm Password:</label>
-            <input value={pages} onChange={handleChangeInMatchPassword} />
+            <input value={matchPassword} onChange={handleChangeInMatchPassword} />
             <button >Create Account</button>
         </form>
     </div>
